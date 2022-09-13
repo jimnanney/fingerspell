@@ -1,4 +1,4 @@
-export default const wordList = [
+const wordList = [
   "aal",
   "aalii",
   "aam",
@@ -49597,3 +49597,5 @@ export default const wordList = [
   "zythem",
   "zythum"
 ]
+
+export default wordList
