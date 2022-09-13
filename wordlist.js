@@ -49598,4 +49598,4 @@ const wordList = [
   "zythum"
 ]
 
-export default wordList
+export { wordList }
