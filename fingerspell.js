@@ -1,4 +1,4 @@
-import wordList from './wordlist'
+import wordList from './wordlist.js'
 
 const Game = (doc) => {
   const seed = Date.now()
