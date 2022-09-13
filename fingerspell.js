@@ -75,7 +75,7 @@ const Game = (doc) => {
   const displayWord = () => display(wordDisplay, word)
 
   const displayTime = () => {
-    const humanTime = `${Math.floor(timeLeft/60)}:${timeLeft % 60}`
+    const humanTime = `${Math.floor(timeLeft/60)}:${(timeLeft % 60).toString().padStart(2,'0')}`
     display(timeDisplay, humanTime)
   }
 
