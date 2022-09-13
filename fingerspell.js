@@ -78,19 +78,15 @@ import { wordList } from './wordlist.js'
     disable(nextButton)
   }
 
-  const getRandomIndex = (list) => {
-    return Math.floor(Math.random() * list.length)
-  }
-
   const getNextWord = () => {
     ++score = score
-    word = wordList[getRandomIndex(wordList)]
+    word = wordList.getRandom()
     displayWord()
     displayScore()
   }
 
   const skipWord = () => {
-    word = wordList[getRandomIndex()]
+    word = wordList.getRandom()
     displayWord()
   }
 

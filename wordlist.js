@@ -49597,5 +49597,8 @@ const wordList = [
   "zythem",
   "zythum"
 ]
+wordList.getRandom = function() {
+  return this.at(Math.random() * this.length)
+}
 
 export { wordList }
