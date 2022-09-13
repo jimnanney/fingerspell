@@ -3,6 +3,7 @@ import { wordList } from './wordlist.js'
 const Game = (doc) => {
   const seed = Date.now()
   const nextButton = '[data-next]'
+  const skipButton = '[data-skip]'
   const newButton = '[data-new]'
   const scoreDisplay = '[data-score]'
   const wordDisplay = '[data-word]'
@@ -59,6 +60,11 @@ const Game = (doc) => {
     displayScore()
   }
 
+  const skip = () => {
+    word = wordList[getRandomIndex()]
+    displayWord()
+  }
+
   const display = (selector, text) => {
     const elements = doc.querySelectorAll(selector)
     elements.forEach(el => el.innerText = `${text}`)
@@ -89,6 +95,7 @@ const Game = (doc) => {
   }
 
   doc.querySelectorAll(nextButton).forEach(nb => nb.addEventListener('click', (e) => guardedEvent(e, getNextWord)))
+  doc.querySelectorAll(skipButton).forEach(nb => nb.addEventListener('click', (e) => guardedEvent(e, skip)))
   doc.querySelectorAll(newButton).forEach(nb => nb.addEventListener('click', (e) => guardedEvent(e, newGame)))
 
 }
