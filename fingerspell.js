@@ -8,7 +8,7 @@ const Game = (doc) => {
   const wordDisplay = '[data-word]'
   const timeDisplay = '[data-time]'
 
-  let score, timer, timeLeft
+  let score, timer, timeLeft, word
 
   const disable = (selector) => {
     const elements = doc.querySelectorAll(selector)
